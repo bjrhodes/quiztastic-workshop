@@ -4,83 +4,108 @@
         <meta charset="UTF8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>TickTastic!</title>
+
+        <link rel="stylesheet" href="reset.css" type="text/css">
+        <link rel="stylesheet" href="style.css" type="text/css">
     </head>
     <body>
 
         <header class="page-header">
-            <h1>TickTastic!</h1>
+            <div class="container">
+                <h1>TickTastic!</h1>
+            </div>
         </header>
 
-        <section>
+        <div class="container">
+            <div class="row">
+                <section class="col-md-8">
 
-            <form action="" method="post">
-                <h2>Submit a new ticket.</h2>
-                <p><small>Or don't. I'm not your supervisor.</small></p>
+                    <form action="" method="post" class="main-form">
+                        <h2 class="main-form__title">Submit a new ticket.</h2>
+                        <p><small>Or don't. I'm not your supervisor.</small></p>
 
-                <div class="form-group">
-                    <label for="name">Your name</label>
-                    <input type="text" name="name" id="name" required>
-                </div>
+                        <div class="form-group">
+                            <label class="control-label" for="name">Your name</label>
+                            <input class="form-control" type="text" name="name" id="name" required>
+                        </div>
 
-                <div class="form-group">
-                    <label for="department">Department</label>
-                    <select name="department" id="department" required>
-                        <option value="">Please choose a department</option>
-                        <option value="accounts">Accounts</option>
-                        <option value="sales">Sales</option>
-                        <option value="it">IT</option>
-                        <option value="hr">Human Resources</option>
-                    </select>
-                </div>
+                        <div class="form-group">
+                            <label class="control-label" for="department">Department</label>
+                            <select class="form-control" name="department" id="department" required>
+                                <option value="">Please choose a department</option>
+                                <option value="accounts">Accounts</option>
+                                <option value="sales">Sales</option>
+                                <option value="it">IT</option>
+                                <option value="hr">Human Resources</option>
+                            </select>
+                        </div>
 
-                <div class="form-group">
-                    <label for="email">Your email</label>
-                    <input type="email" name="email" id="email" required>
-                </div>
+                        <div class="form-group">
+                            <label class="control-label" for="email">Your email</label>
+                            <input class="form-control" type="email" name="email" id="email" required>
+                        </div>
 
-                <div class="form-group">
-                    <label for="telephone">Your telephone number (or extension)</label>
-                    <input type="telephone" name="telephone" id="telephone">
-                </div>
+                        <div class="form-group">
+                            <label class="control-label" for="telephone">Your telephone number (or extension)</label>
+                            <input class="form-control" type="telephone" name="telephone" id="telephone">
+                        </div>
 
-                <div class="form-group">
-                    <label for="priority">Ticket priority</label>
-                    <select name="priority" id="priority" required>
-                        <option value="">Please select the importance of your problem</option>
-                        <option value="annoyance">Important</option>
-                        <option value="trivial">Priority</option>
-                        <option value="dont-worry">Critical</option>
-                        <option value="overblown">Immediate fix required - business interuppted</option>
-                        <option value="potential-issue">I think I will actually die as a direct result of this problem.</option>
-                    </select>
-                </div>
+                        <div class="form-group">
+                            <label class="control-label" for="priority">Ticket priority</label>
+                            <select class="form-control" name="priority" id="priority" required>
+                                <option value="">Please select the importance of your problem</option>
+                                <option value="annoyance">Important</option>
+                                <option value="trivial">Priority</option>
+                                <option value="dont-worry">Critical</option>
+                                <option value="overblown">Immediate fix required - business interuppted</option>
+                                <option value="potential-issue">I think I will actually die as a direct result of this problem.</option>
+                            </select>
+                        </div>
 
-                <div class="form-group">
-                    <label for="details">Details of your issue</label>
-                    <label for="details">Please be as descriptive as you can, and include as much detail as possible.</label>
-                    <textarea name="details" id="details" required></textarea>
-                </div>
+                        <div class="form-group">
+                            <label class="control-label" for="details">Details of your issue</label>
+                            <label class="control-label" for="details">Please be as descriptive as you can, and include as much detail as possible.</label>
+                            <textarea class="form-control" name="details" id="details" required></textarea>
+                        </div>
 
-                <div class="form-group">
-                    <input type="submit" value="Report issue">
-                </div>
+                        <div class="form-group">
+                            <input class="btn btn--block" type="submit" value="Report issue">
+                        </div>
 
-            </form>
-        </section>
+                    </form>
+                </section>
 
-        <section>
+                <section class="col-md-4 existing-tickets">
 
-            <h2>Existing tickets</h2>
+                    <h2 class="existing-tickets__title">Existing tickets</h2>
 
-            <ul class="ticket-list">
-                <li class="ticket-list__item"><strong>Barry Rhodes</strong> - HELP!!</li>
-                <li class="ticket-list__item"><strong>Susan Belvedere</strong> - Network issues.</li>
-                <li class="ticket-list__item"><strong>Barry Rhodes</strong> - Don't worry.</li>
-                <li class="ticket-list__item"><strong>Elaine McWhittle</strong> - The blooming printer again. WHAT DOES 'NO PAPER' EVEN MEAN!? FIX IT NOW!</li>
-                <li class="ticket-list__item"><strong>Barry Rhodes</strong> - IT'S ALL GONE ON FIRE!1!!!1!</li>
-            </ul>
+                    <ul class="ticket-list">
+                        <li class="ticket-list__item">
+                            <h4 class="ticket-list__title">HELP!!</h4>
+                            <span class="ticket-list__user">Barry Rhodes</span>
+                        </li>
+                        <li class="ticket-list__item">
+                            <h4 class="ticket-list__title">Network issues.</h4>
+                            <span class="ticket-list__user">Susan Belvedere</span>
+                        </li>
+                        <li class="ticket-list__item">
+                            <h4 class="ticket-list__title">Don't worry.</h4>
+                            <span class="ticket-list__user">Barry Rhodes</span>
+                        </li>
+                        <li class="ticket-list__item">
+                            <h4 class="ticket-list__title">The blooming printer again. WHAT DOES 'NO PAPER' EVEN MEAN!? FIX IT NOW!</h4>
+                            <span class="ticket-list__user">Elaine McWhittle</span>
+                        </li>
+                        <li class="ticket-list__item">
+                            <h4 class="ticket-list__title">IT'S ALL GONE ON FIRE!1!!!1!</h4>
+                            <span class="ticket-list__user">Barry Rhodes</span>
+                        </li>
+                    </ul>
 
-        </section>
+                </section>
+
+            </div>
+        </div>
 
     </body>
 </html>
