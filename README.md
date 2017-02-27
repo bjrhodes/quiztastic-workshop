@@ -168,8 +168,11 @@ Even though we've got good, well planned, working code your code can almost alwa
 
   * File structure.
   * Relative vs absolute assets
-  * JS structure
-  * JS delivery.
+  * JS structure in relation to testing
+    * Pull out ticket store into its own thing.
+    * write some tests for ticket store (try / catch on JSON.parse and stringify, discuss contracts, standardise the ticket response)
+    * discuss testing of list
+    * move summarise(str) into ticket
 
 
 ## Footnotes
